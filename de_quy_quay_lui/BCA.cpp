@@ -13,6 +13,7 @@ bool ok=false;int obj=1e9+1;
 
 void inp(){
     cin>>n>>m;
+    cin.ignore();
     for(int i=1;i<=n;i++){
         int k;cin>>k;
         for(int j=1;j<=k;j++){
@@ -44,9 +45,9 @@ void Try(int k){
         //duyet tat ca giao vien co the day mon k
         if(check(v,k)){
             x[k]=v;load[v]++;
-            if(k==n){
+            if(k==m){
                 ok=true;
-                int maxload=*max_element(load+1,load+m+1);
+                int maxload=*max_element(load+1,load+n+1);
                 obj=min(obj,maxload);
             }else if(load[v] < obj) Try(k+1);
             load[v]--;

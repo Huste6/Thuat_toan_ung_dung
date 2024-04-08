@@ -25,6 +25,7 @@ bool check(int v,int k){
     if(visited[v]) return false;
     if(v<=n){ // v la diem don
         if(load >= Q) return false;
+        if(visited[v+n]) return false;//neu ma diem tra cua v da duoc duyet
     }else{ // v la diem tra
         if(!visited[v-n]) return false;
     }

@@ -13,6 +13,7 @@ int main(){
                 int sum=a[i]+a[j]+a[r]+a[l];
                 if(sum==k){
                     cout<<"YES";return 0;
+                    ++l;--r;
                 }else if(sum<k){
                     ++l;
                 }else --r;

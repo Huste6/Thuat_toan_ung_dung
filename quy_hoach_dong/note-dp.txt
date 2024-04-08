@@ -1,0 +1,28 @@
+1. 
+- khong tinh hoan trung nhau (123=132)
+- duoc phep dung a[i] nhieu lan
+for(int i=1;i<=n;i++){
+    for(int j=1;j<=s;j++){
+        //code 
+        vd: F[i][j]={F[i][j-a[i]],F[i-1][j]}
+    }
+}
+2.
+-khong tinh hoan vi trung nhau
+-khong duoc phep dung a[i] nhieu lan
+for(int i=1;i<=n;i++){
+    for(int j=s;j>=1;j--){
+        //code
+        F[i][j]={F[i-1][j-a[i]],F[i-1][j]}
+    }
+}
+3.
+- co tinh hoan vi trung nhau
+- dung a[i] nhieu lan 
+-bai toan coin2, staircase
+for(int i=1;i<=s;i++){
+    for(int j=1;j<=n;j++){
+        //code
+        F[i]+=F[i-a[j]]
+    }
+}

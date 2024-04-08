@@ -9,10 +9,12 @@ int x[35],load[35];
 //x[i] is the teacher assigned to course i
 //load[i] is the number of course assigned to teacher i
 bool cfl[35][35];
-bool ok=false;int obj=1e9+1;
+bool ok=false;
+int obj=1e9+1;//obj dung de luu gia tri nho nhat o moi truong hop
 
 void inp(){
     cin>>n>>m;
+    cin.ignore();
     for(int i=1;i<=n;i++){
         int k;cin>>k;
         for(int j=1;j<=k;j++){
@@ -44,9 +46,9 @@ void Try(int k){
         //duyet tat ca giao vien co the day mon k
         if(check(v,k)){
             x[k]=v;load[v]++;
-            if(k==n){
+            if(k==m){
                 ok=true;
-                int maxload=*max_element(load+1,load+m+1);
+                int maxload=*max_element(load+1,load+n+1);
                 obj=min(obj,maxload);
             }else if(load[v] < obj) Try(k+1);
             load[v]--;
