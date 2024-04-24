@@ -12,6 +12,6 @@ ll binpow(ll a,ll b){
     }
 }
 int main(){
-    int n,k;cin>>n>>k;
+    ll n,k;cin>>n>>k;
     cout<<binpow(n,k);
 }

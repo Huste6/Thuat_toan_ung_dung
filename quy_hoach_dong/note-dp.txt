@@ -1,6 +1,7 @@
 1. 
 - khong tinh hoan trung nhau (123=132)
 - duoc phep dung a[i] nhieu lan
+cai tui
 for(int i=1;i<=n;i++){
     for(int j=1;j<=s;j++){
         //code 
