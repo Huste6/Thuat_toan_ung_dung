@@ -61,3 +61,38 @@ output:
 {2 4 4}
 {3 3 4}
 */
+/*
+#include<bits/stdc++.h>
+using namespace std;
+int n,s;
+int a[100],x[100];
+vector<vector<int>> ans;
+void inp(){
+    cin>>n>>s;
+    for(int i=1;i<=n;i++) cin>>a[i];
+    sort(a+1,a+n+1);
+}
+void Try(int i,int sum,int pos){
+    if(sum==s){
+        vector<int> tmp(x+1,x+i);
+        ans.push_back(tmp);
+        return;
+    }
+    if(sum>=s) return;
+    for(int j=pos;j<=n;j++){
+        x[i]=a[j];
+        Try(i+1,sum+a[j],j);
+    }
+}
+int main(){
+    inp();
+    Try(1,0,1);
+    for(auto it:ans){
+        cout<<'{';
+        for(int x:it) cout<<x<<' ';
+        cout<<'}';
+        cout<<'\n';
+    }
+    return 0;
+}
+*/

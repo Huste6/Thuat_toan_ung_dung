@@ -26,3 +26,26 @@ int main(){
     cout<<endl;
     cout<<res;
 }
+/*
+#include<bits/stdc++.h>
+using namespace std;
+int n,k,s;
+int cnt=0;
+void inp(){
+    cin>>n>>k>>s;
+}
+void backTrack(int u,int pos,int sum){
+    if(u==k && sum == s){
+        cnt++;
+        return;
+    }
+    if(u>=k || sum >=s) return;
+    for(int i=pos;i<=n;i++){
+        backTrack(u+1,i+1,sum+i);
+    }
+}
+int main(){
+    inp();
+    backTrack(0,1,0);
+    cout<<cnt;
+}*/

@@ -73,3 +73,59 @@ int main(){
     }
     return 0;
 }
+/*
+#include <bits/stdc++.h>
+using namespace std;
+
+bool isprime[502];
+int n, k;
+vector<vector<int>> vt;
+int x[502];
+
+void seive() {
+    fill(isprime, isprime + 502, true); 
+    isprime[0] = isprime[1] = false; 
+    for (int i = 2; i <= 501; i++) {
+        if (isprime[i]) {
+            for (int j = i * i; j <= 501; j += i) {
+                isprime[j] = false;
+            }
+        }
+    }
+}
+
+void inp() {
+    cin >> n >> k;
+    seive();
+}
+
+void Try(int i, int pos, int sum) {
+    if (i == k) {
+        if (sum == n) {
+            vector<int> ans(x, x + k);
+            vt.push_back(ans);
+        }
+        return;
+    }
+    for (int j = pos; j <= n; j++) {
+        if (isprime[j]) {
+            x[i] = j;
+            Try(i + 1, j + 1, sum + j);
+        }
+    }
+}
+
+int main() {
+    inp();
+    Try(0, 1, 0); 
+    for (const auto& it : vt) {
+        for (int x = 0; x < it.size(); x++) {
+            cout << it[x];
+            if (x != it.size() - 1) cout << '+';
+        }
+        cout << '\n';
+    }
+    return 0;
+}
+
+*/

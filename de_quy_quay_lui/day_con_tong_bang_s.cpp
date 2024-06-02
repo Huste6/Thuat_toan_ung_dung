@@ -33,3 +33,46 @@ int main(){
         if(!ok) cout<<"-1\n";
     }
 }
+/*
+#include<bits/stdc++.h>
+using namespace std;
+int n,s;
+int a[1001];
+int x[1001];
+vector<vector<int>> adj;
+void inp(){
+    cin>>n>>s;
+    for(int i=1;i<=n;i++) cin>>a[i];
+    sort(a+1,a+n+1);
+}
+void Try(int u,int pos,int sum){
+    if(sum==s){
+        vector<int> ans;
+        for(int i=0;i<u;i++){
+            ans.push_back(x[i]);
+        }
+        adj.push_back(ans);
+        return;
+    }
+    if(sum>=s || u >= n){
+        return;
+    }
+    for(int i=pos;i<=n;i++){
+        x[u]=a[i];
+        Try(u+1,i+1,sum+a[i]);
+    }
+}
+int main(){
+    inp();
+    Try(0,1,0);
+    for(auto it:adj){
+        cout<<'[';
+        for(int k:it){
+            cout<<k<<' ';
+        }
+        cout<<']';
+        cout<<endl;
+    }
+    return 0;
+}
+*/

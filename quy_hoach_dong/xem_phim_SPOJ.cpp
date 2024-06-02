@@ -20,3 +20,26 @@ int main(){
     }
     cout<<ans;
 }
+/*
+#include<bits/stdc++.h>
+using namespace std;
+int s,n;
+int dp[100];
+int a[100];
+int res=0;
+int x[100];
+void backtrack(int i,int pos,int sum){
+    if(sum<=s){
+        res=max(res,sum);
+    }
+    for(int j=pos;j<=n;j++){
+        backtrack(i+1,j+1,sum+a[j]);
+    }
+}
+int main(){
+    cin>>s>>n;
+    for(int i=1;i<=n;i++) cin>>a[i];
+    backtrack(1,1,0);
+    cout<<res;
+}
+*/

@@ -1,5 +1,3 @@
-//yeulaptrinh.home.blog
-
 #include <iostream>
 #include <bits/stdc++.h>
 
