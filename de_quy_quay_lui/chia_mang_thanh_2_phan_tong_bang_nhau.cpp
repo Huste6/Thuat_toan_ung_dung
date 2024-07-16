@@ -8,7 +8,7 @@ void inp(){
         cin>>a[i];
         sum+=a[i];
     }
-    if(sum%2) {
+    if(sum%2!=0) {
         cout<<"NO";return;
     }
     bool mark[sum/2];
